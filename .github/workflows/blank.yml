@@ -16,8 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Launch my service here
-        run: echo "Service launched by GITHUB_REF"
-        
+        run: echo "Service launched by $GITHUB_REF"
+    services:
+       image: hello-world
   #  services:
   #    image: hello-world
   first_job:
