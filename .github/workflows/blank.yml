@@ -18,6 +18,7 @@ jobs:
       - name: "Say Hello Mona it's Monday"
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
   greeting_job:
+    needs: first_job
     runs-on: ubuntu-latest
     steps:
       - name: "Say Hello Mona it's Monday"
