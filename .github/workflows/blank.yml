@@ -8,18 +8,19 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+env:
+  DAY_OF_WEEK: Monday
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-          # Runs a single command using the runners shell
-      - name: Test Variable 
-        run: echo $dbserver
-        env: 
-          dbserver: orgserver1
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona
+          
+    env:
+      Greeting: Hello
+      DAY_OF_WEEK: Tuesday
+
