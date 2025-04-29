@@ -17,8 +17,12 @@ jobs:
     steps:
       - name: Launch my service here
         run: echo "Service launched by $GITHUB_REF"
+      - name: My New Val
+        run: echo "$Tom is the value"
     services:
        image: hello-world
+    env:
+      myval: Tom
   #  services:
   #    image: hello-world
   first_job:
