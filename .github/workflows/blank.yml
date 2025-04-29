@@ -1,5 +1,4 @@
 # This is a basic workflow to help you get started with Actions
-
 name: CI
 # Controls when the workflow will run
 on:
@@ -9,8 +8,8 @@ on:
       docker_run: 
       type: boolean
       description: should docker run?
-env:
-  DAY_OF_WEEK: Monday
+  env:
+    DAY_OF_WEEK: Monday
 
 jobs:
   hellworldservice:
